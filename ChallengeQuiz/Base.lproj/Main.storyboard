@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xti-BS-t3N">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChallengeQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tittle.png" translatesAutoresizingMaskIntoConstraints="NO" id="AkX-x0-osQ">
+                                <rect key="frame" x="-9" y="44" width="338" height="163"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="スタートボタンを押すと、問題が出てくるので、その問題に答えてください。答えは下にある三つのボタンの中から一つ選んでください。全ての問題を答え終わったらあなたの正解した問題の数が表示されます。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wSy-Ft-Rcb">
+                                <rect key="frame" x="10" y="234" width="300" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmK-YR-0bq">
+                                <rect key="frame" x="105" y="409" width="111" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <segue destination="xti-BS-t3N" kind="modal" id="Qbs-2Q-dqt"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="START.png" translatesAutoresizingMaskIntoConstraints="NO" id="jFe-Tv-V0i">
+                                <rect key="frame" x="3" y="342" width="314" height="186"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64" y="366"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="bb9-ym-Ewg">
+            <objects>
+                <viewController id="xti-BS-t3N" customClass="QuizViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nUN-cC-Qcu"/>
+                        <viewControllerLayoutGuide type="bottom" id="7zU-aH-JKS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vey-YD-xrI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="QuizSpace.png" translatesAutoresizingMaskIntoConstraints="NO" id="LeK-VP-Tfq">
+                                <rect key="frame" x="-59" y="10" width="421" height="227"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="問題" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nuD-43-0jW">
+                                <rect key="frame" x="36" y="88" width="246" height="90"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AnswerBox.png" translatesAutoresizingMaskIntoConstraints="NO" id="m8m-vk-QI6">
+                                <rect key="frame" x="5" y="176" width="320" height="151"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AnswerBox.png" translatesAutoresizingMaskIntoConstraints="NO" id="v3s-Eo-c7A">
+                                <rect key="frame" x="5" y="283" width="320" height="151"/>
+                            </imageView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMv-Ru-H8W">
+                                <rect key="frame" x="136" y="358" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3V8-KW-FnJ">
+                                <rect key="frame" x="137" y="251" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AnswerBox.png" translatesAutoresizingMaskIntoConstraints="NO" id="4EM-bA-fpx">
+                                <rect key="frame" x="5" y="380" width="320" height="151"/>
+                            </imageView>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTR-BU-4ai">
+                                <rect key="frame" x="136" y="456" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="choiceButton1" destination="3V8-KW-FnJ" id="5Iq-fp-YVU"/>
+                        <outlet property="choiceButton2" destination="PMv-Ru-H8W" id="ctD-iN-UpK"/>
+                        <outlet property="choiceButton3" destination="wTR-BU-4ai" id="enK-3s-Egc"/>
+                        <outlet property="quizTextView" destination="nuD-43-0jW" id="kAf-sR-L0p"/>
+                        <segue destination="54c-Ko-5H6" kind="modal" identifier="toResultView" id="o3x-8w-tSx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLe-LP-75i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508" y="366"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="XYf-BT-4Ak">
+            <objects>
+                <viewController id="54c-Ko-5H6" customClass="ResultViewController" customModule="ChallengeQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="prR-YU-R2Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="3gw-eq-Nbb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g7V-PO-hRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="result.png" translatesAutoresizingMaskIntoConstraints="NO" id="BiB-xB-2HD">
+                                <rect key="frame" x="-49" y="28" width="431" height="244"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="結果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-Mm-aOs">
+                                <rect key="frame" x="0.0" y="98" width="320" height="144"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zY-ZW-fCN">
+                                <rect key="frame" x="29" y="330" width="246" height="54"/>
+                                <state key="normal" title="タイトルに戻る"/>
+                                <connections>
+                                    <action selector="back" destination="54c-Ko-5H6" eventType="touchUpInside" id="ptW-Ju-diM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackToMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="bHL-xJ-GMG">
+                                <rect key="frame" x="-18" y="274" width="357" height="179"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHU-Xw-d3g">
+                                <rect key="frame" x="29" y="461" width="252" height="52"/>
+                                <state key="normal" title="もう一度やる"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DoItAgain.png" translatesAutoresizingMaskIntoConstraints="NO" id="big-5G-L6f">
+                                <rect key="frame" x="-8" y="401" width="328" height="159"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="XqG-Mm-aOs" id="hQ0-qI-SWR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hd9-zk-fs8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962" y="366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AnswerBox.png" width="696" height="358"/>
+        <image name="BackToMenu.png" width="1114" height="568"/>
+        <image name="DoItAgain.png" width="1010" height="502"/>
+        <image name="QuizSpace.png" width="1106" height="660"/>
+        <image name="START.png" width="972" height="588"/>
+        <image name="result.png" width="1078" height="836"/>
+        <image name="tittle.png" width="1288" height="594"/>
+    </resources>
+</document>
