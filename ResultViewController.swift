@@ -33,6 +33,10 @@ class ResultViewController: UIViewController {
         self.presentingViewController?.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func retry() {
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+
+    
 
     /*
     // MARK: - Navigation
@@ -44,4 +48,5 @@ class ResultViewController: UIViewController {
     }
     */
 
+}
 }

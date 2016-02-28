@@ -99,6 +99,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CeH-9d-5Jc"/>
                     <connections>
                         <outlet property="choiceButton1" destination="3V8-KW-FnJ" id="UyX-xP-kjb"/>
                         <outlet property="choiceButton2" destination="PMv-Ru-H8W" id="ctD-iN-UpK"/>
@@ -143,12 +144,13 @@
                                 <rect key="frame" x="-18" y="274" width="357" height="179"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHU-Xw-d3g">
-                                <rect key="frame" x="29" y="461" width="252" height="52"/>
-                                <state key="normal" title="もう一度やる"/>
+                                <rect key="frame" x="0.0" y="419" width="320" height="149"/>
+                                <state key="normal" backgroundImage="DoItAgain.png"/>
+                                <connections>
+                                    <action selector="retry" destination="54c-Ko-5H6" eventType="touchUpInside" id="ZQX-39-WFo"/>
+                                    <segue destination="xti-BS-t3N" kind="modal" id="8Rn-E6-vmz"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DoItAgain.png" translatesAutoresizingMaskIntoConstraints="NO" id="big-5G-L6f">
-                                <rect key="frame" x="-8" y="401" width="328" height="159"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -170,4 +172,7 @@
         <image name="result.png" width="1078" height="836"/>
         <image name="tittle.png" width="1288" height="594"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8Rn-E6-vmz"/>
+    </inferredMetricsTieBreakers>
 </document>
